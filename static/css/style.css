@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
+}
+
+
+
+.left {
+    height: 100%;
+    width: 50%;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.left img {
+    width: 93%;
+    height: 100%;
+}
+.img2{
+    display: none;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: scroll;
+    position: absolute;
+    right: 0;
+}
+
+.right_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15%;
+    width: 74%;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.links button {
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    gap: 10px;
+    background-color: #222222;
+}
+
+.links button:nth-child(1) {
+    background-color: #C99819;
+    width: 70%;
+}
+
+.links button .bx {
+    color: #C99819;
+    font-size: 1.8rem;
+}
+
+.links button .bxl-google {
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.line {
+    color: #A3A3A3;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    justify-content: center;
+}
+#headings{
+    margin: 0 8px;
+}
+
+.line span {
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+}
+.city, .country{
+    width: 100%;
+}
+
+form {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    color: #fff;
+}
+
+.first_input {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.first_left {
+    width: 60%;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: .8px solid #999;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input.upload_image {
+    text-align: end;
+}
+
+.dropzone {
+    width: 149px;
+    height: 133px;
+    margin: 10px 0;
+    border: 1px solid #999;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropzone .bx {
+    color: #999;
+    position: absolute;
+    font-size: 2.5rem;
+}
+
+.upload-input {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.select select {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    border: 1px solid #999;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.select:before {
+    content: '';
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-width: 8px 5px 0 5px;
+    border-style: solid;
+    border-color: #999 transparent transparent transparent;
+    z-index: 1;
+}
+
+.select select:disabled {
+    pointer-events: none;
+    opacity: .5;
+}
+
+.dateTime {
+    margin: 5% auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dateTime .select {
+    width: 32%;
+}
+
+.radios {
+    display: flex;
+    margin: 15px 0;
+    justify-content: space-between;
+}
+
+.radios_box {
+    background: #fff;
+    border: 1px solid #999;
+    border-radius: 5px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 32%;
+}
+
+input[type="radio"] {
+    width: 10%;
+    accent-color: #000;
+}
+
+.radios_box label {
+    font-size: .9rem;
+}
+
+.areas {
+    display: flex;
+    gap: 33px;
+}
+
+.areas input {
+    width: 100%;
+}
+
+#submit_btn {
+    background-color: #222222;
+    color: #C99819;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+}
+
+.signUp_btn {
+    margin-top: 20px;
+}
+
+.signUp_btn span {
+    font-size: 1.2rem;
+    color: #949494;
+    font-family: 'Inter', sans-serif;
+}
+
+.signUp_btn span a {
+    color: #C99819;
+}
+
+.upload_img input[type=file] {
+    display: none;
+}
+
+.choose-btn {
+    border-radius: 2px;
+    margin: 10px 0;
+    float: left;
+    background: #C99819;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+.hide{
+    color: red;
+    margin: 20px 0;
+}
+@media (max-width:1300px) {
+    .left img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width:1120px) {
+    .links {
+        width: 87%;
+    }
+
+    .line {
+        font-size: 3.5rem;
+        width: 68%;
+    }
+
+    .line span {
+        font-size: 1.4rem;
+    }
+
+    form {
+        width: 88%;
+    }
+
+    .dropzone {
+        width: 131px;
+    }
+
+    .left {
+        width: 50%;
+    }
+    .right_box {
+        width: 95%;
+    }
+    .left img {
+        width: 100%;
+        height: 88%;
+    }
+}
+
+@media (max-width:930px) {
+    .left {
+        width: 60%;
+        display: flex;
+        align-items: center;
+    }
+    .right {
+        width: 40%;
+    }
+
+    .left img {
+        height: 83%;
+    }
+    .links {
+        width: 100%;
+    }
+    .links span {
+        font-size: .9rem;
+    }
+    .line {
+        font-size: 2.8rem;
+    }
+    .first_left {
+        width: 56%;
+    }
+    input {
+        margin: 15px 0;
+        border-radius: 5px;
+    }
+    form {
+        width: 100%;
+    }
+    .dropzone {
+        width: 113px;
+        height: 148px;
+    }
+    label {
+        font-size: .9rem;
+    }
+    .right_box {
+        margin-bottom: 10vh;
+        width: 86%;
+    } 
+    .signUp_btn span {
+        font-size: .9rem;
+    }
+    .one, .two, .three,.four{
+        display: none;
+    }
+    .left img {
+        width: 100%;
+        height: 81%;
+    }
+
+}
+@media (max-width:865px) {
+    .links span {
+        font-size: .75rem;
+    }
+    .links button {
+        padding: 13px;
+        gap: 4px;
+    }
+    .line {
+        font-size: 2.4rem;
+    }
+    .first_left {
+        width: 54%;
+    } 
+    .areas {
+        gap: 7px;
+    }
+    .select select {
+        padding: 9px 6px;
+    }
+    .left img {
+        height: 73%;
+    }
+    .dropzone {
+        width: 131px;
+        height: 148px;
+    }
+}
+@media (max-width:770px) {
+    .container {
+        overflow: scroll;
+        flex-direction: column;
+    }
+    .left {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+    }
+    .right {
+        width: 100%;
+    }
+    .left {
+        height: 100%;
+    }
+    .left img {
+        width: 55%;
+    }
+    .line {
+        font-size: 4rem;
+    }
+    .first_left {
+        width: 63%;
+    }
+    .dropzone {
+        width: 186px;
+        height: 135px;
+        margin: 11px 0;
+    }
+    .links button:nth-child(1) {
+        flex-direction: row;
+    }
+    input {
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+    .city, .country{
+        width: 100%;
+    }
+    .one, .two, .three,.four{
+        display: block;
+    }
+    .left, .right{
+        position: static;
+    }
+}
+@media (max-width:600px) {
+    .links {
+        width: 100%;
+    }
+    form {
+        width: 100%;
+    }
+    .dropzone {
+        width: 140px;
+        margin: 10px 0;
+    }
+    .line {
+        font-size: 3rem;
+    }
+    .left {
+        height: 47%;
+    }
+}
+@media (max-width:520px) {
+    .one, .two{
+        display: none;
+    }
+}
+@media (max-width:460px){
+    .left {
+        height: 41%;
+    }
+    .dropzone {
+        width: 115px;
+        height: 134px;
+        margin: 10px 0;
+    }
+    .line {
+        font-size: 2.2rem;
+    }
+    .one, .two, .three,.four{
+        display: none;
+    }
+}
+@media (max-width:400px) {
+    .left {
+        height: 28%;
+    }
+}
+
+
